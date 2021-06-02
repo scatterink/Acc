@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Moroccan Days",
+    "author": "John L",
+    "hero": "moroccandays.jpg"
+  },
+  {
+    "title": "Swedish Fishing",
+    "author": "Rachel L",
+     "hero": "autumnclouds.jpg"
+  },
+  {
+    "title": "The Adventure Begins",
+    "hero": "snowcup.jpg",
+    "prominent": true
+  },
+  {
+    "title": "Paris in Spring",
+    "author": "John L",
+    "hero": "christmas.jpg"
+  },
+   {
+    "title": "Trial By Fire",
+    "author": "Anthony R",
+    "hero": "firepots.jpg"
+  },
+  {
+    "title": "Water Ventures",
+    "author": "Rachel L",
+    "hero": "jellyfish.jpg"
+  },
+  {
+    "title": "Mt. Zekial",
+    "author": "Rachel L",
+
+    "hero": "mountaincabin.jpg"
+  },
+  {
+    "title": "Cozumel Caves",
+    "author": "Rachel L",
+
+    "hero": "lightcave.jpg"
+  },
+  {
+    "title": "Amazing Ireland",
+    "author": "Rachel L",
+
+    "hero": "greengrass.jpg"
+  },
+  {
+    "title": "Cabin Fever",
+    "author": "Rachel L",
+ 
+    "hero": "snowcabin.jpg"
+  },
+  {
+    "title": "To the ancient ruins",
+    "author": "Rachel L",
+
+    "hero": "ruins.jpg"
+  },
+  {
+    "title": "New fashion trends",
+    "author": "Rachel L",
+
+    "hero": "umbrella.jpg"
+  },
+  {
+    "title": "Go on a vacation",
+    "author": "Rachel L",
+
+    "hero": "adventurecave.jpg"
+  }
+]
