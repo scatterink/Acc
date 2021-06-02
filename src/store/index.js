@@ -14,19 +14,19 @@ export default new Vuex.Store({
       },
       {
         text: 'About',
-        href: '#about',
+        href: '/#about',
       },
       {
         text: 'What We Do',
-        href: '#whatwedo',
+        href: '/#whatwedo',
       },
       {
         text: 'Prices',
-        href: '#prices',
+        href: '/#prices',
       },
       {
         text: 'Contact',
-        href: '#contact',
+        href: '/#contact',
       },
       {
         text: 'Blog',
