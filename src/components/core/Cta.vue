@@ -29,3 +29,11 @@
     },
   }
 </script>
+<style>
+.v-btn--fab.v-btn--fixed {
+    z-index: 6;
+}
+.v-btn--fixed.v-btn--top {
+    top: 100px;
+}
+</style>

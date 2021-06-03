@@ -10,7 +10,7 @@ export default new Vuex.Store({
     items: [
       {
         text: 'Home',
-        href: '#!',
+        href: '#home',
       },
       {
         text: 'About',
@@ -30,7 +30,7 @@ export default new Vuex.Store({
       },
       {
         text: 'Blog',
-        href: '../blog',
+        href: '/blog',
       },
     ],
   },

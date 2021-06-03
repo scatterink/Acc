@@ -8,8 +8,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import CountryFlag from 'vue-country-flag'
+import VueSmoothScroll from 'vue2-smooth-scroll'
 library.add(faUserSecret)
 
+Vue.use(VueSmoothScroll)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('country-flag', CountryFlag)
 Vue.config.productionTip = false

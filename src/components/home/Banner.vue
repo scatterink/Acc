@@ -1,5 +1,8 @@
 <template>
-  <base-card dark>
+  <base-card
+    dark
+    class="mt-15"
+  >
     <v-img
       :src="require('@/assets/articles/blurcamera.png')"
       class="grey lighten-2"
@@ -40,3 +43,8 @@
     name: 'HomeBanner',
   }
 </script>
+<style>
+.base-card{
+  z-index: 15;
+}
+</style>

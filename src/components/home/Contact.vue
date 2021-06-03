@@ -5,7 +5,7 @@
   >
     <base-card
       color="rgba(203, 170, 92, 0.51)"
-      class="pa-3"
+      class="pa-3 mt-12"
     >
       <v-container>
         <v-row>

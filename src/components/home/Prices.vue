@@ -3,7 +3,7 @@
     id="prices"
     tag="section"
   >
-    <base-subheading>
+    <base-subheading class="mt-10">
       Prices
     </base-subheading>
     <div class="mb-4">

@@ -9,6 +9,7 @@
       <v-list-item
         v-for="(link, i) in links"
         :key="i"
+        v-smooth-scroll
         :to="link.to"
         :href="link.href"
         @click="onClick($event, link)"

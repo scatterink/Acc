@@ -50,10 +50,10 @@
           icon: 'mdi-instagram',
         },
         {
-          href: '#!',
+          href: 'https://www.facebook.com/INKASSOCIATEZ',
           icon: 'mdi-facebook',
         },
-        {
+        /* {
           href: '#!',
           icon: 'mdi-google-plus',
         },
@@ -68,7 +68,7 @@
         {
           href: '#!',
           icon: 'mdi-pinterest',
-        },
+        }, */
       ],
     }),
   }

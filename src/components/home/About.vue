@@ -3,7 +3,7 @@
     id="about"
     tag="section"
   >
-    <base-subheading>
+    <base-subheading class="mt-15">
       About Us
     </base-subheading>
 
@@ -79,3 +79,8 @@
     name: 'HomeAbout',
   }
 </script>
+<style scoped>
+.v-container{
+  z-index: 15;
+}
+</style>
