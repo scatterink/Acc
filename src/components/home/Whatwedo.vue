@@ -188,10 +188,11 @@
                 <div>
                   We can file sales tax returns as required to ensure you
                   are onside with your reporting requirements.
-                </div><div>
-                  For payroll,
-                  we will discuss options using one  our recommended payroll applications.
-                  Payroll includes remittance filing, providing payroll slips and direct deposit.
+                </div><div class="mt-1">
+                  Our Team have specialized training needed to manage your payroll,
+                  large or small, efficiently and accurately. Our team will get your payroll
+                  out on time, and ensure that your business is complying with all payroll
+                  tax obligations.
                   <div class="text-right">
                     <country-flag
                       country="ca"
@@ -414,9 +415,12 @@
                 </div>
               </v-expansion-panel-header>
               <v-expansion-panel-content>
-                Cash flow analysis and budgeting, the monitoring of Key Performance
-                Indicator’s (KPI) and business coaching can be included in our packages.
-                These services can be monthly or quarterly
+                Other service that we provide but not limited to are: <div>Business registration and secretarial servics,</div>
+                <div> Cash flow analysis and budgeting,</div> <div>
+                  the monitoring of Key Performance
+                  Indicator’s (KPI) and etc.
+                </div>
+                These services can be monthly or quarterly.
                 <div class="text-right">
                   <country-flag
                     country="ca"

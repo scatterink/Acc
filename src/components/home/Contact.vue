@@ -47,7 +47,7 @@
             <v-row class="pa-2">
               <v-responsive
                 class="overflow-visible mr-2"
-                max-width="400"
+                max-width="500"
               >
                 <v-text-field
                   hide-details
@@ -59,11 +59,23 @@
             <v-row class="pa-2">
               <v-responsive
                 class="overflow-visible mr-2"
-                max-width="400"
+                max-width="500"
               >
                 <v-text-field
                   hide-details
                   label="Phone Number"
+                  solo
+                />
+              </v-responsive>
+            </v-row>
+            <v-row class="pa-1">
+              <v-responsive
+                class="overflow-visible mr-2"
+                max-width="500"
+              >
+                <v-text-field
+                  hide-details
+                  label="Subject"
                   solo
                 />
               </v-responsive>
@@ -95,7 +107,7 @@
                 :block="$vuetify.breakpoint.xsOnly"
                 class="ma-0"
                 color="secondary"
-                style="height: 48px"
+                style="height: 55px"
               >
                 Submit
               </v-btn>

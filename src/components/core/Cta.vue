@@ -4,14 +4,14 @@
     color="secondary"
     fab
     fixed
-    href="https://store.vuetifyjs.com/product/blog-theme-free"
     rel="noopener"
     right
     target="_blank"
     top
+    href="$router.push('#contact')"
   >
     <v-icon>
-      mdi-vuetify
+      mdi-phone
     </v-icon>
   </v-btn>
 </template>
@@ -19,6 +19,9 @@
 <script>
   export default {
     name: 'CoreCta',
+    /* data: () => ({
+      link: '/#contact',
+    }), */
 
     computed: {
       styles () {

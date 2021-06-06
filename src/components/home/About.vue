@@ -27,7 +27,7 @@
               x-large
               class="fas fa-hourglass"
             />
-          </div> <div class="mb-4">
+          </div> <div class="mb-4 mt-1">
             Save time
           </div>
         </h4>
@@ -43,7 +43,7 @@
               x-large
               class="fas fa-home"
             />
-          </div> <div class="mb-4">
+          </div> <div class="mb-4 mt-1">
             Realize your goal
           </div>
         </h4>
@@ -61,7 +61,7 @@
                 class="fas fa-chart-line"
               />
             </h1>
-          </div> <div class="mb-4">
+          </div> <div class="mb-4 mt-1">
             Prepare for what's ahead
           </div>
         </h4>
