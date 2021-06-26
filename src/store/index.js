@@ -21,18 +21,18 @@ export default new Vuex.Store({
         href: '#whatwedo',
       },
       {
-        text: 'Prices',
-        href: '#prices',
+        text: 'Our Process',
+        href: '#ourprocess',
+      },
+      {
+        text: 'Sectors',
+        href: '#sectors',
       },
       {
         text: 'Contact',
         href: '#contact',
       },
-      {
-        text: 'Blog',
-        href: '/blog',
-      },
-    ],
+        ],
   },
   getters: {
     categories: state => {

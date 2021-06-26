@@ -452,5 +452,6 @@
 <style>
 .v-expansion-panel {
   min-height: 145px;
+  min-width: 50px;
   }
 </style>

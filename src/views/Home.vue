@@ -1,17 +1,16 @@
 <template>
   <div id="home">
-    <articles>
-      <banner />
-      <!----</articles>--->
+    <banner />
+    <!----</articles>--->
 
-      <about />
-      <whatwedo />
-      <prices />
-      <!---<subscribe />-->
+    <about />
+    <whatwedo />
+    <ourprocess />
+    <sectors />
+    <!---<subscribe />-->
 
-      <!---<social />--->
-      <contact />
-    </articles>
+    <!---<social />--->
+    <contact />
   </div>
 </template>
 
@@ -27,7 +26,9 @@
       /* Subscribe: () => import('@/components/home/Subscribe'), */
       Contact: () => import('@/components/home/Contact'),
       whatwedo: () => import('@/components/home/Whatwedo'),
-      prices: () => import('@/components/home/Prices'),
+      ourprocess: () => import('@/components/home/Ourprocess'),
+      sectors: () => import('@/components/home/Sectors'),
+
     },
   }
 </script>

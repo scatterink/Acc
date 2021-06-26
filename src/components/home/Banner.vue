@@ -18,20 +18,13 @@
           md="7"
           offset-md="8"
         >
-          <h1 class="text-h2 font-weight-light">
-            The Art Of Travel
+          <h1 class="text-h3 font-weight-dark">
+            Redefining Accounting
           </h1>
 
-          <div class="subheading text-uppercase pl-2 mb-4">
-            Finding Beauty, One flight at a time
+          <div class="subheading text pl-2 mb-4">
+            <h3> Do what you do best, and let us take care of the rest.</h3>
           </div>
-
-          <v-btn
-            color="primary"
-            depressed
-          >
-            Subscribe
-          </v-btn>
         </v-col>
       </v-row>
     </v-img>

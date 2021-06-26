@@ -1,19 +1,26 @@
 <template>
-  <v-btn
-    :style="styles"
-    color="secondary"
-    fab
-    fixed
-    rel="noopener"
-    right
-    target="_blank"
-    top
-    href="$router.push('#contact')"
-  >
-    <v-icon>
-      mdi-phone
-    </v-icon>
-  </v-btn>
+  <v-tooltip left>
+    <template v-slot:activator="{ on, attrs }">
+      <v-btn
+        v-bind="attrs"
+        :style="styles"
+        color="secondary"
+        fab
+        fixed
+        rel="noopener"
+        right
+        target="_blank"
+        top
+        v-on="on"
+        @click="$vuetify.goTo('#contact')"
+      >
+        <v-icon>
+          mdi-phone
+        </v-icon>
+      </v-btn>
+    </template>
+    <span>Contact Us.</span>
+  </v-tooltip>
 </template>
 
 <script>

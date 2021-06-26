@@ -14,33 +14,23 @@
             md="5"
           >
             <base-subheading class="mb-3">
-              Send a message:
+              Get In Touch With Us:
             </base-subheading>
 
             <p>
-              Enjoy financial peace of mind and prosper with our services.
-              Schedule a free assessment now.
+              Learn Why Companies use Ink & Associatez
             </p>
             <v-row class="pa-2">
               <v-responsive
                 class="overflow-visible mr-2"
-                max-width="400"
+                max-width="500"
               >
                 <v-text-field
                   hide-details
-                  label="First Name"
+                  label="Name"
                   solo
-                />
-              </v-responsive>
-
-              <v-responsive
-                class="overflow-visible mr-2"
-                max-width="400"
-              >
-                <v-text-field
-                  hide-details
-                  label="Last Name"
-                  solo
+                  type="text"
+                  name="user_name"
                 />
               </v-responsive>
             </v-row>
@@ -53,6 +43,8 @@
                   hide-details
                   label="Your Email Address"
                   solo
+                  type="text"
+                  name="user_email"
                 />
               </v-responsive>
             </v-row>
@@ -65,24 +57,11 @@
                   hide-details
                   label="Phone Number"
                   solo
+                  type="text"
+                  name="user_tel"
                 />
               </v-responsive>
             </v-row>
-            <v-row class="pa-1">
-              <v-responsive
-                class="overflow-visible mr-2"
-                max-width="500"
-              >
-                <v-text-field
-                  hide-details
-                  label="Subject"
-                  solo
-                />
-              </v-responsive>
-            </v-row>
-            <div class="mt-4">
-              Tell us a little about your business, and how we can assist you.
-            </div>
             <v-row class="pa-2">
               <v-responsive
                 class="overflow-visible mr-2"
@@ -96,8 +75,9 @@
                 /> --->
                 <v-textarea
                   solo
-                  name="input-7-4"
                   label="Message"
+                  type="text"
+                  name="user_message"
                 />
               </v-responsive>
             </v-row>
@@ -108,6 +88,9 @@
                 class="ma-0"
                 color="secondary"
                 style="height: 55px"
+                type="submit"
+                value="send"
+                @click="sendEmail"
               >
                 Submit
               </v-btn>
@@ -137,7 +120,7 @@
                 <v-list-item-title>EMAIL</v-list-item-title>
 
                 <v-list-item-subtitle>
-                  THEARTOFTRAVEL@GMAIL.COM
+                  INKASSOCIATEZ@GMAIL.COM
                 </v-list-item-subtitle>
               </v-list-item>
 
@@ -154,7 +137,14 @@
                 <v-list-item-title>ADDRESS</v-list-item-title>
 
                 <v-list-item-subtitle>
-                  1234 WORLD DR. HERE, TX 76123
+                  <div> John's Town,</div>
+                  <div> Beckford Town P.A,</div>
+                  <div> St. Thomas,</div>
+                  <div> Jamaica,</div>
+                  <div class="mb-2" />
+                  <div> 42 Rue Bedard,</div>
+                  <div> Gatinea, Quebec,</div>
+                  <div> Canada</div>
                 </v-list-item-subtitle>
               </v-list-item>
 
@@ -171,7 +161,8 @@
                 <v-list-item-title>PHONE</v-list-item-title>
 
                 <v-list-item-subtitle>
-                  555-789-1234
+                  <div>(JA)876-598-3780</div>
+                  <div>(CA)819-598-3780</div>
                 </v-list-item-subtitle>
               </v-list-item>
             </v-list>
@@ -183,7 +174,20 @@
 </template>
 
 <script>
+  import emailjs from 'emailjs-com'
   export default {
     name: 'HomeContact',
+
+    methods: {
+      sendEmail: (e) => {
+        emailjs.sendForm('service_Inkassociatez', 'template_inkassociatez', e.target, 'user_Lk2ynUaMtWJHXCWDcBEoW')
+          .then((result) => {
+            console.log('SUCCESS!', result.status, result.text)
+          }, (error) => {
+            console.log('FAILED...', error)
+          })
+      },
+    },
+
   }
 </script>
