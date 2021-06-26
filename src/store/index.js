@@ -32,6 +32,10 @@ export default new Vuex.Store({
         text: 'Contact',
         href: '#contact',
       },
+      {
+        text: 'Blog',
+        href: '/blog',
+      },
         ],
   },
   getters: {
