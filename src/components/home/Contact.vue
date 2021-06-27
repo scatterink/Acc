@@ -13,90 +13,100 @@
             cols="12"
             md="5"
           >
-            <base-subheading class="mb-3">
-              Get In Touch With Us:
-            </base-subheading>
+            <v-form
+              v-if="!messageWasSent"
+              ref="form"
+              @submit.prevent
+            >
+              <base-subheading class="mb-3">
+                Get In Touch With Us:
+              </base-subheading>
+              <p>
+                Learn Why Companies use Ink & Associatez
+              </p>
+              <v-row class="pa-2">
+                <v-responsive
+                  class="overflow-visible mr-2"
+                  max-width="500"
+                >
+                  <v-text-field
+                    hide-details
+                    label="Name"
+                    solo
+                    type="text"
+                    name="user_name"
+                  />
+                </v-responsive>
+              </v-row>
+              <v-row class="pa-2">
+                <v-responsive
+                  class="overflow-visible mr-2"
+                  max-width="500"
+                >
+                  <v-text-field
+                    hide-details
+                    label="Your Email Address"
+                    solo
+                    type="text"
+                    name="user_email"
+                  />
+                </v-responsive>
+              </v-row>
+              <v-row class="pa-2">
+                <v-responsive
+                  class="overflow-visible mr-2"
+                  max-width="500"
+                >
+                  <v-text-field
+                    hide-details
+                    label="Phone Number"
+                    solo
+                    type="text"
+                    name="user_tel"
+                  />
+                </v-responsive>
+              </v-row>
+              <v-row class="pa-2">
+                <v-responsive
+                  class="overflow-visible mr-2"
+                  max-width="500"
+                >
+                  <!---- <v-text-field
+                      hide-details
+                      label="Message"
+                      solo
+                      min-height="400"
+                    /> --->
+                  <v-textarea
+                    solo
+                    label="Message"
+                    type="text"
+                    name="user_message"
+                  />
+                </v-responsive>
+              </v-row>
 
-            <p>
-              Learn Why Companies use Ink & Associatez
-            </p>
-            <v-row class="pa-2">
-              <v-responsive
-                class="overflow-visible mr-2"
-                max-width="500"
+              <v-row class="pa-2">
+                <v-btn
+                  :block="$vuetify.breakpoint.xsOnly"
+                  class="ma-0"
+                  color="secondary"
+                  style="height: 55px"
+                  type="submit"
+                  value="send"
+                  @click.prevent="sendEmail($event)"
+                >
+                  Submit
+                </v-btn>
+              </v-row>
+            </v-form>
+            <div v-else>
+              <img
+                :src="require('@/assets/young-beautiful-woman-using-laptop-600w-1908448339.webp')"
+                style="width: 100%"
               >
-                <v-text-field
-                  hide-details
-                  label="Name"
-                  solo
-                  type="text"
-                  name="user_name"
-                />
-              </v-responsive>
-            </v-row>
-            <v-row class="pa-2">
-              <v-responsive
-                class="overflow-visible mr-2"
-                max-width="500"
-              >
-                <v-text-field
-                  hide-details
-                  label="Your Email Address"
-                  solo
-                  type="text"
-                  name="user_email"
-                />
-              </v-responsive>
-            </v-row>
-            <v-row class="pa-2">
-              <v-responsive
-                class="overflow-visible mr-2"
-                max-width="500"
-              >
-                <v-text-field
-                  hide-details
-                  label="Phone Number"
-                  solo
-                  type="text"
-                  name="user_tel"
-                />
-              </v-responsive>
-            </v-row>
-            <v-row class="pa-2">
-              <v-responsive
-                class="overflow-visible mr-2"
-                max-width="500"
-              >
-                <!---- <v-text-field
-                  hide-details
-                  label="Message"
-                  solo
-                  min-height="400"
-                /> --->
-                <v-textarea
-                  solo
-                  label="Message"
-                  type="text"
-                  name="user_message"
-                />
-              </v-responsive>
-            </v-row>
-
-            <v-row class="pa-2">
-              <v-btn
-                :block="$vuetify.breakpoint.xsOnly"
-                class="ma-0"
-                color="secondary"
-                style="height: 55px"
-                type="submit"
-                value="send"
-                @click="sendEmail"
-              >
-                Submit
-              </v-btn>
-            </v-row>
+            </div>
           </v-col>
-
           <v-col
             cols="12"
             md="6"
@@ -177,11 +187,16 @@
   import emailjs from 'emailjs-com'
   export default {
     name: 'HomeContact',
+    data: () => ({
+      messageWasSent: false,
+    }),
 
     methods: {
-      sendEmail: (e) => {
-        emailjs.sendForm('service_Inkassociatez', 'template_inkassociatez', e.target, 'user_Lk2ynUaMtWJHXCWDcBEoW')
+      sendEmail: function () {
+        const form = this.$refs.form
+        emailjs.sendForm('service_inkassociatez', 'template_inkassociatez', form.$el, 'user_Lk2ynUaMtWJHXCWDcBEoW')
           .then((result) => {
+            this.messageWasSent = true
             console.log('SUCCESS!', result.status, result.text)
           }, (error) => {
             console.log('FAILED...', error)

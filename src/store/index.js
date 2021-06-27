@@ -7,36 +7,37 @@ export default new Vuex.Store({
   state: {
     articles: require('@/data/articles.json'),
     drawer: false,
+    page: '',
     items: [
       {
         text: 'Home',
-        href: '#home',
+        to: '/',
       },
       {
         text: 'About',
-        href: '#about',
+        href: '/#about',
       },
       {
         text: 'What We Do',
-        href: '#whatwedo',
+        href: '/#whatwedo',
       },
       {
         text: 'Our Process',
-        href: '#ourprocess',
+        href: '/#ourprocess',
       },
       {
         text: 'Sectors',
-        href: '#sectors',
+        href: '/#sectors',
       },
       {
         text: 'Contact',
-        href: '#contact',
+        href: '/#contact',
       },
       {
         text: 'Blog',
-        href: '/blog',
+        to: '/blog',
       },
-        ],
+    ],
   },
   getters: {
     categories: state => {
@@ -65,8 +66,7 @@ export default new Vuex.Store({
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
     toggleDrawer: state => (state.drawer = !state.drawer),
+    setPage: (state, payload) => (state.page = payload),
   },
-  actions: {
-
-  },
+  actions: {},
 })
