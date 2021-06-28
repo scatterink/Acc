@@ -14,8 +14,10 @@
             md="5"
           >
             <v-form
+
               v-if="!messageWasSent"
               ref="form"
+              v-model="valid"
               @submit.prevent
             >
               <base-subheading class="mb-3">
@@ -30,11 +32,15 @@
                   max-width="500"
                 >
                   <v-text-field
+                    v-model="username"
                     hide-details
                     label="Name"
                     solo
                     type="text"
                     name="user_name"
+                    :rules="[rules.required, rules.counter]"
+                    counter
+                    maxlength="20"
                   />
                 </v-responsive>
               </v-row>
@@ -44,11 +50,13 @@
                   max-width="500"
                 >
                   <v-text-field
+                    v-model="email"
                     hide-details
                     label="Your Email Address"
                     solo
-                    type="text"
+                    type="email"
                     name="user_email"
+                    :rules="[rules.required, rules.email]"
                   />
                 </v-responsive>
               </v-row>
@@ -61,7 +69,7 @@
                     hide-details
                     label="Phone Number"
                     solo
-                    type="text"
+                    type="tel"
                     name="user_tel"
                   />
                 </v-responsive>
@@ -101,10 +109,21 @@
               </v-row>
             </v-form>
             <div v-else>
-              <img
-                :src="require('@/assets/young-beautiful-woman-using-laptop-600w-1908448339.webp')"
-                style="width: 100%"
+              <v-img
+                :src="require('@/assets/mail.gif')"
+                class="grey lighten-2"
+                width="100%"
               >
+                <div class="text-center">
+                  <h3>Hi {{ username }}</h3>
+                </div>
+                <div class="text-center">
+                  <h4>Your Message Was Sent Successful</h4>
+                </div>
+                <div class="text-center">
+                  <h5>We will get back to you moemntarily</h5>
+                </div>
+              </v-img>
             </div>
           </v-col>
           <v-col
@@ -187,8 +206,21 @@
   import emailjs from 'emailjs-com'
   export default {
     name: 'HomeContact',
+    username: '',
     data: () => ({
       messageWasSent: false,
+      valid: false,
+      username: '',
+
+      email: '',
+      rules: {
+        required: value => !!value || 'Required.',
+        counter: value => value.length <= 20 || 'Max 20 characters',
+        email: value => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return pattern.test(value) || 'Invalid e-mail.'
+        },
+      },
     }),
 
     methods: {
